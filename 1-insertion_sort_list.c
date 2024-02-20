@@ -20,8 +20,8 @@ void insertion_sort_list(listint_t **list)
 		while (pntr->next && (pntr->n > pntr->next->n))
 		{
 			temp = pntr->next;
-			pntr->next = tmp->next;
-			temp->prev = pntr->next;
+			pntr->next = temp->next;
+			temp->prev = pntr->prev;
 
 			if (temp->prev)
 				pntr->prev->next = temp;
